@@ -1,0 +1,152 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #4CAF50;
+    /* Green background */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Logout Link Styles */
+.logout-link {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    /* Change left to right */
+    font-size: 16px;
+    text-decoration: none;
+    background-color: #f44336;
+    /* Red background */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    /* Smooth transition */
+}
+
+.logout-link:hover {
+    background-color: #d32f2f;
+    /* Darker red on hover */
+}
+
+/* Section Styles */
+section {
+    margin: 20px;
+}
+
+/* Form Styles */
+form {
+    margin: 20px auto;
+    /* Center the form */
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    /* Rounded corners */
+    width: 90%;
+    /* Responsive width */
+    max-width: 400px;
+    /* Max width */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Soft shadow */
+}
+
+form label,
+form input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    /* Dark footer */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    /* Changed to relative for better footer placement */
+}
+
+/* Navigation Links Styles */
+.nav-links {
+    display: flex;
+    gap: 15px;
+    /* Space between links */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #007BFF;
+    /* Link color */
+    transition: color 0.3s;
+    /* Smooth color transition */
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+    /* Adds underline on hover */
+    color: #0056b3;
+    /* Darker blue on hover */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 600px) {
+    .header-container {
+        flex-direction: column;
+        /* Stack header elements on smaller screens */
+        align-items: flex-start;
+        /* Align items to start */
+    }
+
+    .logout-link {
+        position: static;
+        /* Make logout link static on small screens */
+        margin-bottom: 10px;
+        /* Space below logout link */
+    }
+
+    form {
+        width: 95%;
+        /* Adjust form width for smaller screens */
+    }
+}
+.alert {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #4CAF50;
+    /* Green border */
+    background-color: #dff0d8;
+    /* Light green background */
+    color: #3c763d;
+    /* Dark green text */
+    border-radius: 5px;
+}   
+
+
