@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudBank Dashboard</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e3f2fd;
+            /* Light blue background */
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Header Container */
+        header {
+            background-color: #0277bd;
+            /* Deep blue background */
+            color: white;
+            padding: 20px 10px;
+            /* Top-bottom padding */
+            text-align: center;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header-container h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .logout-link {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            background-color: #ff5252;
+            /* Red button */
+            padding: 8px 16px;
+            border-radius: 5px;
+        }
+
+        .logout-link:hover {
+            background-color: #d50000;
+            /* Darker red on hover */
+        }
+
+        /* Navigation Links */
+        .nav-links {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffeb3b;
+            /* Yellow on hover */
+        }
+
+        /* Operations Container */
+        .operations-container {
+            display: flex;
+            /* Arrange items horizontally */
+            flex-wrap: wrap;
+            /* Allow wrapping on smaller screens */
+            justify-content: center;
+            /* Center-align cards */
+            gap: 20px;
+            /* Add space between cards */
+            padding: 20px;
+        }
+
+        /* Individual operation cards */
+        .operation-card {
+            flex: 1 1 250px;
+            max-width: 300px;
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .operation-card img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 15px;
+        }
+
+        .operation-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .operation-card h3 {
+            margin: 10px 0;
+            color: #0277bd;
+            font-size: 1.2rem;
+        }
+
+        .operation-card p {
+            color: #555;
+            font-size: 1rem;
+        }
+
+                
+
+        .header-container h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .header-container img {
+            width: 30px;    /* Adjust icon size */
+            height: 30px;
+        }
+
+        .logout-link {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            background-color: #ff5252;
+            padding: 8px 16px;
+            border-radius: 5px;
+            display: flex;          /* Align icon and text */
+            gap: 8px;               /* Space between icon and text */
+        }
+
+        .logout-link img {
+            width: 20px;   /* Smaller icon for button */
+            height: 20px;
+        }
+
+        .logout-link:hover {
+            background-color: #d50000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <h1>Account Dashboard</h1>
+            <a href="/logout" class="logout-link">
+                <img src="https://cdn1.iconfinder.com/data/icons/heroicons-ui/24/logout-1024.png" alt="Logout Icon">
+                Logout
+            </a>
+        </div>
+        
+        <nav class="nav-links">
+            <a href="/about">About Us</a>
+            <a href="/contact">Contact Us</a>
+            <a href="/services">Services</a>
+            <a href="/update">Update Profile</a>
+        </nav>
+    </header>
+
+    <!-- Dashboard Title -->
+    <h2>CloudBank Dashboard</h2>
+
+    <!-- Operations Container -->
+    <div class="operations-container">
+        <!-- Operation Card 1 -->
+        
+            <div class="operation-card">
+                <a href="/balance" class="operation-card-link"><img src="https://th.bing.com/th/id/OIP.kWs2R7SnTQrZZWPMElocbQHaHa?rs=1&pid=ImgDetMain" alt="Check Balance Icon"></a>
+                <h3>Check Balance</h3>
+                <p>View your current account balance instantly.</p>
+            </div>
+        
+
+        <!-- Operation Card 2 -->
+        <div class="operation-card">
+            <a href="/deposit" class="operation-card-link"><img src="https://cdn-icons-png.flaticon.com/512/5776/5776487.png" alt="Deposit Money Icon"></a>
+            <h3>Deposit Money</h3>
+            <p>Deposit funds securely into your account.</p>
+        </div>
+
+        <!-- Operation Card 3 -->
+        <div class="operation-card">
+            <a href="/statement" class="operation-card-link"><img src="https://cdn-icons-png.flaticon.com/512/10149/10149661.png" alt="Transaction History Icon"></a>
+            <h3>Transaction History</h3>
+            <p>Track all your recent account activities.</p>
+        </div>
+
+        <!-- Operation Card 4 -->
+        <div class="operation-card">
+            <a href="/transfer" class="operation-card-link"><img src="https://cdn1.iconfinder.com/data/icons/currency-89/64/04-Money_transfer-512.png" alt="Transfer Funds Icon"></a>
+            <h3>Transfer Funds</h3>
+            <p>Send money quickly and safely to other accounts.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

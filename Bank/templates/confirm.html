@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation Page - Bank App</title>
+    <style>
+        :root {
+            --clr-neon: rgb(97, 235, 235);
+            --clr-bg: #010101;
+            --clr-white: #ffffff;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--clr-bg);
+            color: var(--clr-neon);
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-shadow: 0 0 10px var(--clr-neon), 0 0 20px var(--clr-neon);
+        }
+
+        .confirmation-message {
+            background-color: rgba(5, 5, 5, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 50px var(--clr-neon), 0 -20px 40px rgba(97, 235, 235, 0.8);
+            max-width: 700px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .confirmation-message p {
+            font-size: 1.5em;
+            color: var(--clr-white);
+            margin-bottom: 20px;
+        }
+
+        .confirmation-message a {
+            font-size: 1.5em;
+            color: var(--clr-neon);
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid var(--clr-neon);
+            border-radius: 10px;
+            box-shadow: 0 0 10px var(--clr-neon);
+            transition: all 0.3s ease;
+        }
+
+        .confirmation-message a:hover {
+            background-color: var(--clr-neon);
+            color: var(--clr-bg);
+            box-shadow: 0 0 20px var(--clr-neon);
+        }
+
+        footer {
+            margin-top: 20px;
+            color: var(--clr-white);
+            font-size: 1.2em;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Confirmation</h1>
+    </header>
+
+    <div class="confirmation-message">
+        {% if user %}
+        <p>Welcome, {{ user }}!</p>
+        <p>Your transaction has been successfully processed.</p>
+        <p>Thank you for banking with us!</p>
+        <a href="{{ url_for('dashboard') }}">Return to Dashboard</a>
+        {% else %}
+        <p>Error: No user session found.</p>
+        <a href="{{ url_for('login') }}">Login</a>
+        {% endif %}
+    </div>
+
+    <footer>
+        <p>&copy; 2024 CloudBank. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
