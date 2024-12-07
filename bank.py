@@ -24,15 +24,15 @@ db_config = {
 }
 
 
-cnxpool = mysql.connector.pooling.MySQLConnectionPool(
-    pool_name="mypool",
-    pool_size=5,
-    host="cloudbankdb.c9sqqcwmk2di.ap-south-1.rds.amazonaws.com",
-    user="admin",
-    password="Cloudbank123",
-    database="cloudbank_db",
-    ssl_ca="ap-south-1-bundle.pem"  # Path to the downloaded certificate
-)
+# cnxpool = mysql.connector.pooling.MySQLConnectionPool(
+#     pool_name="mypool",
+#     pool_size=5,
+#     host="cloudbankdb.c9sqqcwmk2di.ap-south-1.rds.amazonaws.com",
+#     user="admin",
+#     password="Cloudbank123",
+#     database="cloudbank_db",
+#     ssl_ca="ap-south-1-bundle.pem"  # Path to the downloaded certificate
+# )
 
 # Create MySQL connection pool
 # cnxpool = mysql.connector.pooling.MySQLConnectionPool(pool_name="mypool",
@@ -42,7 +42,7 @@ cnxpool = mysql.connector.pooling.MySQLConnectionPool(
 # Helper function to get a database connection from the pool
 def get_db_connection():
     try:
-        conn = cnxpool.get_connection()
+        conn = mysql.connector.connect(**db_config)
         if conn.is_connected():
             return conn
     except mysql.connector.Error as err:
